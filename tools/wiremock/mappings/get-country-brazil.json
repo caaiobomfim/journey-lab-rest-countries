@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/v3.1/name/brazil"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "brazil-response.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

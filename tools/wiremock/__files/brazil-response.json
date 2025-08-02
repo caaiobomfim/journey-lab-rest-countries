@@ -1,0 +1,9 @@
+[
+  {
+    "name": { "common": "Brazil" },
+    "capital": ["Brasília"],
+    "region": "Americas",
+    "population": 212559409,
+    "flags": { "png": "https://flagcdn.com/w320/br.png" }
+  }
+]

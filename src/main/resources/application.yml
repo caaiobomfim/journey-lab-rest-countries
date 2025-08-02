@@ -1,0 +1,11 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: journey-lab-rest-countries
+  cloud:
+    openfeign:
+      client:
+        config:
+          countryClient:
+            url: ${COUNTRY_API_URL}
