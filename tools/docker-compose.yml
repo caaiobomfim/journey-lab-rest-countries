@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  wiremock:
+    image: wiremock/wiremock
+    container_name: wiremock
+    ports:
+      - "10104:8080"
+    volumes:
+      - ./wiremock/mappings:/home/wiremock/mappings
+      - ./wiremock/__files:/home/wiremock/__files
+    networks:
+      - default
+  app:
+    build:
+      context: ../
+      dockerfile: tools/Dockerfile
+    container_name: restcountries
+    ports:
+      - "8080:8080"
+    depends_on:
+      - wiremock
+    environment:
+      - COUNTRY_API_URL=http://wiremock:8080/v3.1
+#      - COUNTRY_API_URL=https://restcountries.com/v3.1
+    restart: unless-stopped
+    networks:
+      - default
+networks:
+  default:
+    driver: bridge
