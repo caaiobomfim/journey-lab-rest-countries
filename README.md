@@ -47,6 +47,7 @@ Nesta primeira entrega, aprofundei meus conhecimentos em:
 - OpenFeign
 - Docker + Docker Compose
 - WireMock
+- Insomnia
 
 ### Arquitetura
 
