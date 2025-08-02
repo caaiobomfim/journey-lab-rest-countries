@@ -6,6 +6,23 @@ Projeto experimental focado em práticas de DevOps e SRE, utilizando a [REST Cou
 
 ---
 
+## 📅 Planejamento de Releases
+
+| Release   | Objetivo                                         | Status           |
+|-----------|--------------------------------------------------|------------------|
+| **0.1**   | API funcional com consumo da REST Countries      | 🛠️ Em Andamento |
+| **0.2**   | Cache com Caffeine                               | ⏳ Planejada      |
+| **0.3**   | Observabilidade com Micrometer + Prometheus      | ⏳ Planejada      |
+| **0.4**   | Testes + mock da API externa                     | ⏳ Planejada      |
+| **0.5**   | Dockerização                                     | ⏳ Planejada      |
+| **0.6**   | Deploy com Terraform em AWS ECS                  | ⏳ Planejada      |
+| **0.7**   | API Gateway + autenticação básica                | ⏳ Planejada      |
+| **0.8**   | Alertas e dashboards com Grafana/Datadog         | ⏳ Planejada      |
+| **0.9**   | Resiliência: Retry, Timeout, Circuit Breaker     | ⏳ Planejada      |
+| **1.0**   | Publicação no GitHub + LinkedIn                  | ⏳ Planejada      |
+
+---
+
 ## 🚀 Release 0.1 - Integração inicial com REST Countries
 
 ### Objetivo
@@ -33,23 +50,6 @@ cd journey-lab-rest-countries
 # Compile e execute
 ./mvnw spring-boot:run
 ```
-
----
-
-## 📅 Planejamento de Releases
-
-| Release   | Objetivo                                         | Status           |
-|-----------|--------------------------------------------------|------------------|
-| **0.1**   | API funcional com consumo da REST Countries      | 🛠️ Em Andamento |
-| **0.2**   | Cache com Caffeine                               | ⏳ Planejada      |
-| **0.3**   | Observabilidade com Micrometer + Prometheus      | ⏳ Planejada      |
-| **0.4**   | Testes + mock da API externa                     | ⏳ Planejada      |
-| **0.5**   | Dockerização                                     | ⏳ Planejada      |
-| **0.6**   | Deploy com Terraform em AWS ECS                  | ⏳ Planejada      |
-| **0.7**   | API Gateway + autenticação básica                | ⏳ Planejada      |
-| **0.8**   | Alertas e dashboards com Grafana/Datadog         | ⏳ Planejada      |
-| **0.9**   | Resiliência: Retry, Timeout, Circuit Breaker     | ⏳ Planejada      |
-| **1.0**   | Publicação no GitHub + LinkedIn                  | ⏳ Planejada      |
 
 ---
 
