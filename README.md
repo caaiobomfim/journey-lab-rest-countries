@@ -4,8 +4,6 @@ Projeto experimental focado em práticas de DevOps e SRE, utilizando a [REST Cou
 
 > Este repositório faz parte da minha jornada de migração para áreas de **SRE** e **Cloud/DevOps**, com foco em boas práticas de observabilidade, resiliência, infraestrutura como código, automação e escalabilidade.
 
----
-
 ## 📅 Planejamento de Releases
 
 | Release   | Objetivo                                         | Status           |
