@@ -155,10 +155,31 @@ Resposta esperada:
 ---
 
 ## 📘 Referências
-- https://restcountries.com/
-- https://start.spring.io/
-- https://micrometer.io/
-- https://docs.spring.io/spring-boot/docs/current/reference/html/
+
+#### 🧩 Integração de APIs e consumo HTTP
+- [Spring Cloud OpenFeign Docs](https://docs.spring.io/spring-cloud-openfeign/docs/current/reference/html/)
+- [REST Countries API](https://restcountries.com/)
+- [WireMock Documentation](https://wiremock.org/docs/)
+
+#### ⚖️ Validações com Jakarta Bean Validation
+- [Jakarta Bean Validation 3.0 Spec (JSR 380)](https://jakarta.ee/specifications/bean-validation/3.0/jakarta-bean-validation-spec-3.0.html)
+- [Hibernate Validator (Referência de implementação)](https://hibernate.org/validator/)
+
+#### 🚨 Tratamento de erros e RFC 7807
+- [RFC 7807 - Problem Details for HTTP APIs](https://datatracker.ietf.org/doc/html/rfc7807)
+- [Spring Boot Exception Handling Best Practices](https://reflectoring.io/spring-boot-exception-handling/)
+
+#### 🧪 Testes em APIs REST com Spring
+- [Spring Boot Testing Docs](https://docs.spring.io/spring-boot/reference/testing/index.html#testing)
+- [Mockito](https://site.mockito.org/)
+- [Spring MockMvc](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/MockMvc.html)
+- [Instancio – Java object generator for testing](https://www.instancio.org/)
+
+#### Extras opcionais (para contexto e futuras releases)
+- [Micrometer – Metrics Collection for JVM-Based Apps](https://micrometer.io/)
+- [Docker Compose Docs](https://docs.docker.com/compose/)
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- [OpenAPI Specification (para futura documentação de erros e endpoints)](https://spec.openapis.org/oas/latest.html)
 
 ---
 
