@@ -21,7 +21,7 @@ Esta release marca um avanço importante no ciclo de desenvolvimento do projeto,
 3. **Desabilitação da obrigatoriedade de aprovação de PRs**, permitindo merges mais ágeis durante o desenvolvimento.
 
 #### ⚙️ CI/CD com GitHub Actions
-4. **Criação do arquivo** `ci.yml` com três jobs:
+4. **Criação do arquivo** `ci-feature-develop.yml` com três jobs:
 - `Build`: compila o projeto com Maven (`mvn clean install`).
 - `Test`: executa testes unitários (`mvn test`).
 - `Open Pull Request`: cria automaticamente um PR da branch atual para a `develop`, utilizando `gh pr create`.
