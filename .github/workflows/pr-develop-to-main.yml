@@ -1,4 +1,4 @@
-name: Open PR from develop to main
+name: Build, Coverage and Auto PR from develop to main
 
 on:
   push:
@@ -10,8 +10,8 @@ permissions:
   pull-requests: write
 
 jobs:
-  pr-develop-main:
-    name: Open PR to Main
+  build-and-check-coverage:
+    name: Build and Verify Coverage
     runs-on: ubuntu-latest
 
     steps:
@@ -46,16 +46,24 @@ jobs:
             echo "✅ Coverage meets threshold"
           fi
 
+  pr-develop-main:
+    name: Open PR from develop to main
+    runs-on: ubuntu-latest
+    needs: build-and-check-coverage
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Authenticate GitHub CLI
         run: gh auth login --with-token <<< "${{ secrets.GH_TOKEN }}"
 
-      - name: Create Pull Request from develop to main
+      - name: Create Pull Request
         run: |
           gh pr create \
             --base main \
             --head develop \
             --title "Auto PR from develop to main" \
             --body-file .github/pr-body-develop-to-main.md || echo "PR já existente ou sem alterações."
-
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
