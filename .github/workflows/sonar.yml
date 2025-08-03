@@ -3,10 +3,7 @@ name: SonarQube Analysis
 on:
   push:
     branches:
-      - develop
-  pull_request:
-    branches:
-      - develop
+      - main
 
 permissions:
   contents: read
