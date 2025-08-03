@@ -18,6 +18,34 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Build and run tests with coverage
+        run: mvn clean verify
+
+      - name: Check JaCoCo coverage threshold (min 90%)
+        run: |
+          sudo apt-get update && sudo apt-get install -y libxml2-utils
+          COVERED=$(xmllint --xpath "string(//report/counter[@type='INSTRUCTION']/@covered)" target/site/jacoco/jacoco.xml)
+          MISSED=$(xmllint --xpath "string(//report/counter[@type='INSTRUCTION']/@missed)" target/site/jacoco/jacoco.xml)
+          TOTAL=$((COVERED + MISSED))
+          if [ "$TOTAL" -eq 0 ]; then
+            echo "No coverage data found."
+            exit 1
+          fi
+          PERCENT=$((100 * COVERED / TOTAL))
+          echo "Total coverage: ${PERCENT}%"
+          if [ "$PERCENT" -lt 90 ]; then
+            echo "❌ Coverage below threshold (90%)"
+            exit 1
+          else
+            echo "✅ Coverage meets threshold"
+          fi
+
       - name: Authenticate GitHub CLI
         run: gh auth login --with-token <<< "${{ secrets.GH_TOKEN }}"
 
