@@ -27,6 +27,17 @@ Projeto experimental focado em práticas de DevOps e SRE, utilizando a [REST Cou
 ### 📌 Visão Geral
 Este projeto expõe um endpoint REST que recebe o nome de um país e retorna suas informações principais (nome, capital, região, população, e URL da bandeira), consumindo a API REST Countries v3.1. Para facilitar os testes locais, o projeto utiliza o WireMock para simular chamadas HTTP.
 
+### ✅ Funcionalidades implementadas
+
+- Criação do endpoint REST `GET /countries/{name}` para retornar dados do país informado.
+- Integração com a **REST Countries API v3.1** usando **Feign Client**.
+- Implementação da camada de serviço (`CountryServiceImpl`) com regra para capital "N/A" quando ausente.
+- Criação de estrutura baseada em boas práticas de engenharia: `Controller`, `Service`, `Client` e `DTOs`.
+- Utilização de **Java Records** para modelar as respostas de forma imutável e concisa.
+- Simulação de respostas da API externa com **WireMock** para testes locais.
+- Configuração via `application.yml` com suporte a variáveis de ambiente.
+- Dockerização da aplicação com **Dockerfile** e orquestração local via **Docker Compose**.
+
 ### 🧠 Aprendizados
 
 Nesta primeira entrega, aprofundei meus conhecimentos em:
