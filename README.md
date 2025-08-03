@@ -121,4 +121,4 @@ Resposta esperada (HTTP 400 - application/problem+json):
 ---
 
 ## 📌 Autor
-**Caio Bomfim** – Projeto pessoal de transição para SRE/DevOps
+**Caio Bomfim** – Projeto pessoal de transição para SRE/DevOps.
