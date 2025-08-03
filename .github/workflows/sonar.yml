@@ -27,6 +27,11 @@ jobs:
           distribution: 'temurin'
 
       - name: Build and analyze with SonarQube
-        run: mvn clean verify sonar:sonar -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+        run: |
+          mvn clean verify sonar:sonar \
+            -Dsonar.projectKey=caaiobomfim_journey-lab-rest-countries \
+            -Dsonar.organization=caaiobomfim \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
