@@ -4,7 +4,8 @@ Todas as mudanças importantes do projeto estão documentadas aqui, seguindo o p
 
 ---
 
-## [0.2.0] - 2025-08-02 - Robustez e confiança: testes unitários e tratamento de exceções
+## [0.2.0] - 2025-08-02
+## 🚀 Robustez e confiança: testes unitários e tratamento de exceções
 ### 📌 Visão Geral
 Essa entrega foi focada em garantir **qualidade**, **segurança** e **previsibilidade** das respostas da API, mesmo em cenários de erro. Foram implementadas validações com Jakarta, tratamento global de exceções seguindo o padrão **RFC 7807** (`application/problem+json`) e testes automatizados com foco em confiabilidade.
 
@@ -55,7 +56,8 @@ Essa entrega foi focada em garantir **qualidade**, **segurança** e **previsibil
 
 ---
 
-## [0.1.0] - 2025-08-02 - Integração inicial com REST Countries
+## [0.1.0] - 2025-08-02
+## 🚀 Integração inicial com REST Countries
 ### 📌 Visão Geral
 Este projeto expõe um endpoint REST que recebe o nome de um país e retorna suas informações principais (nome, capital, região, população, e URL da bandeira), consumindo a API REST Countries v3.1. Para facilitar os testes locais, o projeto utiliza o WireMock para simular chamadas HTTP.
 
