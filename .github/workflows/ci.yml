@@ -56,6 +56,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: develop
-          head: ${{ github.head_ref || github.ref_name }}
+          head: ${{ github.ref_name }}
           title: 'Auto PR from ${{ github.ref_name }} to develop'
           body: 'Este PR foi aberto automaticamente pelo GitHub Actions após o push na branch ${{ github.ref_name }}.'
+          update-existing: true
