@@ -10,7 +10,7 @@ Projeto experimental focado em práticas de DevOps e SRE, utilizando a [REST Cou
 |-------------------------------|-----------------------------------------------------------------------|----------------|
 | [**0.1.0**](CHANGELOG.md#010) | API funcional com consumo da REST Countries                           | ✅ Concluída    |
 | [**0.2.0**](CHANGELOG.md#020) | Robustez e confiança: testes unitários e tratamento de exceções       | ✅ Concluída    |
-| [**0.3.0**](CHANGELOG.md#030) | Automação de CI/CD, controle de qualidade e integração com SonarCloud | ⏳ Planejada    |
+| [**0.3.0**](CHANGELOG.md#030) | Automação de CI/CD, controle de qualidade e integração com SonarCloud | ✅ Concluída    |
 | **0.4.0**                     | Testes + mock da API externa                                          | ⏳ Planejada    |
 | **0.5.0**                     | Dockerização                                                          | ⏳ Planejada    |
 | **0.6.0**                     | Deploy com Terraform em AWS ECS                                       | ⏳ Planejada    |
