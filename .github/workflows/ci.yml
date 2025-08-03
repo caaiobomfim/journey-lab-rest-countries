@@ -1,0 +1,40 @@
+name: CI and Auto PR to Develop
+
+on:
+  push:
+    branches:
+      - 'feature/**'
+      - 'fix/**'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Build with Maven
+        run: mvn clean install
+
+  open-pull-request:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Pull Request to develop
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: develop
+          branch: ${{ github.ref_name }}
+          title: 'Auto PR from ${{ github.ref_name }} to develop'
+          body: 'Este PR foi aberto automaticamente pelo GitHub Actions após o push na branch ${{ github.ref_name }}.'
