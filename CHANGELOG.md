@@ -59,7 +59,7 @@ Essa entrega foi focada em garantir **qualidade**, **segurança** e **previsibil
 ### [0.1.0] - 2025-08-02
 ## 🚀 Integração inicial com REST Countries
 ### 📌 Visão Geral
-Este projeto expõe um endpoint REST que recebe o nome de um país e retorna suas informações principais (nome, capital, região, população, e URL da bandeira), consumindo a API REST Countries v3.1. Para facilitar os testes locais, o projeto utiliza o WireMock para simular chamadas HTTP.
+Este projeto expõe um endpoint REST que recebe o nome de um país e retorna suas informações principais (nome, capital, região, população, e URL da bandeira), consumindo a **API REST Countries v3.1**. Para facilitar os testes locais, o projeto utiliza o **WireMock** para simular chamadas HTTP.
 
 ### ✅ Funcionalidades implementadas
 
