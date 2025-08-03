@@ -6,18 +6,18 @@ Projeto experimental focado em práticas de DevOps e SRE, utilizando a [REST Cou
 
 ## 📅 Planejamento de Releases
 
-| Release                       | Objetivo                                                        | Status         |
-|-------------------------------|-----------------------------------------------------------------|----------------|
-| [**0.1.0**](CHANGELOG.md#010) | API funcional com consumo da REST Countries                     | ✅ Concluída    |
-| [**0.2.0**](CHANGELOG.md#020) | Robustez e confiança: testes unitários e tratamento de exceções | ✅ Concluída    |
-| **0.3.0**                     | Observabilidade com Micrometer + Prometheus                     | ⏳ Planejada    |
-| **0.4.0**                     | Testes + mock da API externa                                    | ⏳ Planejada    |
-| **0.5.0**                     | Dockerização                                                    | ⏳ Planejada    |
-| **0.6.0**                     | Deploy com Terraform em AWS ECS                                 | ⏳ Planejada    |
-| **0.7.0**                     | API Gateway + autenticação básica                               | ⏳ Planejada    |
-| **0.8.0**                     | Alertas e dashboards com Grafana/Datadog                        | ⏳ Planejada    |
-| **0.9.0**                     | Resiliência: Retry, Timeout, Circuit Breaker                    | ⏳ Planejada    |
-| **1.0.0**                     | Publicação no GitHub + LinkedIn                                 | ⏳ Planejada    |
+| Release                       | Objetivo                                                              | Status         |
+|-------------------------------|-----------------------------------------------------------------------|----------------|
+| [**0.1.0**](CHANGELOG.md#010) | API funcional com consumo da REST Countries                           | ✅ Concluída    |
+| [**0.2.0**](CHANGELOG.md#020) | Robustez e confiança: testes unitários e tratamento de exceções       | ✅ Concluída    |
+| [**0.3.0**](CHANGELOG.md#030) | Automação de CI/CD, controle de qualidade e integração com SonarCloud | ✅ Concluída    |
+| **0.4.0**                     | Testes + mock da API externa                                          | ⏳ Planejada    |
+| **0.5.0**                     | Dockerização                                                          | ⏳ Planejada    |
+| **0.6.0**                     | Deploy com Terraform em AWS ECS                                       | ⏳ Planejada    |
+| **0.7.0**                     | API Gateway + autenticação básica                                     | ⏳ Planejada    |
+| **0.8.0**                     | Alertas e dashboards com Grafana/Datadog                              | ⏳ Planejada    |
+| **0.9.0**                     | Resiliência: Retry, Timeout, Circuit Breaker                          | ⏳ Planejada    |
+| **1.0.0**                     | Publicação no GitHub + LinkedIn                                       | ⏳ Planejada    |
 
 ---
 
@@ -112,11 +112,24 @@ Resposta esperada (HTTP 400 - application/problem+json):
 - [Spring MockMvc](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/MockMvc.html)
 - [Instancio – Java object generator for testing](https://www.instancio.org/)
 
+#### 🧠 GitHub Actions e CI/CD
+- [GitHub Actions Documentation](https://docs.github.com/actions)
+- [Using `gh pr create`](https://cli.github.com/manual/gh_pr_create)
+- [Configuração de tokens no GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+- [Como proteger branches no GitHub](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches)
+
+#### 🔍 Qualidade de código e cobertura
+- [JaCoCo – Java Code Coverage Library](https://www.jacoco.org/jacoco/)
+- [SonarCloud Documentation](https://docs.sonarcloud.io/)
+- [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/)
+- [xmllint command line tool](http://xmlsoft.org/xmllint.html)
+
 #### Extras opcionais (para contexto e futuras releases)
 - [Micrometer – Metrics Collection for JVM-Based Apps](https://micrometer.io/)
 - [Docker Compose Docs](https://docs.docker.com/compose/)
 - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 - [OpenAPI Specification (para futura documentação de erros e endpoints)](https://spec.openapis.org/oas/latest.html)
+- [Gitmoji – An emoji guide for your commit messages](https://gitmoji.dev/)
 
 ---
 
