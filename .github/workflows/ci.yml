@@ -59,18 +59,12 @@ jobs:
 
       - name: Create Pull Request
         run: |
+          sed -i "s/\${{ github.ref_name }}/${GITHUB_REF_NAME}/g" .github/pr-body.md
           gh pr create \
             --base develop \
             --head ${{ github.ref_name }} \
             --title "Auto PR from ${{ github.ref_name }}" \
-            --body "
-              ## 📦 Pull Request Automático
-  
-              Este PR foi criado automaticamente após o push na branch \`${{ github.ref_name }}\`.
-            
-              ### 🛑 Atenção
-              
-              > **Não faça merge direto sem revisão.**
-              > Esse PR é um facilitador da automação, mas requer validação humana antes de ser integrado à \`develop\`."
+            --body-file .github/pr-body.md
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
