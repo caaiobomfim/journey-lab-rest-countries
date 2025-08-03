@@ -63,6 +63,13 @@ jobs:
             --base develop \
             --head ${{ github.ref_name }} \
             --title "Auto PR from ${{ github.ref_name }}" \
-            --body "Este PR foi aberto automaticamente após o push da branch ${{ github.ref_name }}."
+            --body "## 📦 Pull Request Automático
+  
+              Este PR foi criado automaticamente após o push na branch \`${{ github.ref_name }}\`.
+            
+              ### 🛑 Atenção
+              
+              > **Não faça merge direto sem revisão.**
+              > Esse PR é um facilitador da automação, mas requer validação humana antes de ser integrado à \`develop\`."
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
