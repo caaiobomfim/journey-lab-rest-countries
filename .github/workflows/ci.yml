@@ -11,7 +11,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  build:
+  Build:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,7 +28,7 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
-  test:
+  Test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
