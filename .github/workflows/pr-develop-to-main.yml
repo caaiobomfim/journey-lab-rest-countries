@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   pr-develop-main:
+    name: Open PR to Main
     runs-on: ubuntu-latest
 
     steps:

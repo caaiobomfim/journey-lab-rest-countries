@@ -64,7 +64,7 @@ jobs:
             --base develop \
             --head ${{ github.ref_name }} \
             --title "Auto PR from ${{ github.ref_name }}" \
-            --body-file .github/pr-body.md
+            --body-file .github/pr-body.md || echo "PR já existente ou sem alterações."
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_REF_NAME: ${{ github.ref_name }}
