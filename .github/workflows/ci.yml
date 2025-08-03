@@ -6,14 +6,9 @@ on:
       - 'feature/**'
       - 'fix/**'
 
-permissions:
-  contents: write
-  pull-requests: write
-
 jobs:
   Build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
         with:
@@ -45,6 +40,9 @@ jobs:
         run: mvn test
 
   open-pull-request:
+    permissions:
+      contents: write
+      pull-requests: write
     name: Open PR to Develop
     needs: [build, test]
     runs-on: ubuntu-latest
@@ -53,11 +51,6 @@ jobs:
         with:
           persist-credentials: true
       - name: Create Pull Request to develop
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: develop
-          head: ${{ steps.extract_branch.outputs.branch_name }}
-          title: 'Auto PR from ${{ steps.extract_branch.outputs.branch_name }} to develop'
-          body: 'Este PR foi aberto automaticamente pelo GitHub Actions após o push na branch ${{ steps.extract_branch.outputs.branch_name }}.'
-          update-existing: true
+        run: gh pr create -B base_branch -H branch_to_merge --title 'Merge branch_to_merge into base_branch' --body 'Created by Github action'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
