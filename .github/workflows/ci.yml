@@ -63,7 +63,8 @@ jobs:
             --base develop \
             --head ${{ github.ref_name }} \
             --title "Auto PR from ${{ github.ref_name }}" \
-            --body "## 📦 Pull Request Automático
+            --body "
+              ## 📦 Pull Request Automático
   
               Este PR foi criado automaticamente após o push na branch \`${{ github.ref_name }}\`.
             
