@@ -134,13 +134,15 @@ environment:
 
 ## 🧪 Testes
 
-Você pode testar usando Insomnia ou Postman:
+Você pode testar usando **Insomnia** ou **Postman**:
+
+#### ✅ Requisição válida
 
 ```bash
 GET http://localhost:8080/countries/brazil
 ```
 
-Resposta esperada:
+Resposta esperada (HTTP 200):
 
 ```bash
 {
@@ -149,6 +151,32 @@ Resposta esperada:
   "region": "Americas",
   "population": 212559409,
   "flagUrl": "https://flagcdn.com/w320/br.png"
+}
+```
+
+#### ❌ Requisição inválida (validação)
+
+```bash
+GET http://localhost:8080/countries/c
+```
+
+Resposta esperada (HTTP 400 - application/problem+json):
+
+```bash
+{
+  "type": "https://journey.dev/problems/validation-error",
+  "title": "Validation error",
+  "status": 400,
+  "detail": "One or more fields are invalid.",
+  "instance": "/countries/c",
+  "timestamp": "2025-08-02T22:33:44.491Z",
+  "violations": [
+    {
+      "field": "name",
+      "message": "The country name must be between 2 and 56 characters.",
+      "rejectedValue": "c"
+    }
+  ]
 }
 ```
 
