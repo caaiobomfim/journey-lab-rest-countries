@@ -63,7 +63,7 @@ Nesta primeira entrega, aprofundei meus conhecimentos em:
 ## 🚀 Release 0.2.0 - Robustez e confiança: testes unitários e tratamento de exceções
 
 ### 📌 Visão Geral
-Essa entrega foi focada em garantir qualidade, segurança e previsibilidade das respostas da API, mesmo em cenários de erro. Foram implementadas validações com Jakarta, tratamento global de exceções seguindo o padrão RFC 7807 (application/problem+json) e testes automatizados com foco em confiabilidade.
+Essa entrega foi focada em garantir **qualidade**, **segurança** e **previsibilidade** das respostas da API, mesmo em cenários de erro. Foram implementadas validações com Jakarta, tratamento global de exceções seguindo o padrão **RFC 7807** (`application/problem+json`) e testes automatizados com foco em confiabilidade.
 
 ### ✅ Funcionalidades implementadas
 
@@ -73,29 +73,29 @@ Essa entrega foi focada em garantir qualidade, segurança e previsibilidade das 
 - Somente letras (regex)
 
 #### 🛑 Tratamento global de exceções com @RestControllerAdvice, retornando erros formatados com:
-- type, title, status, detail, instance, timestamp, violations
+- `type`, `title`, `status`, `detail`, `instance`, `timestamp`, `violations`
 
 #### 💥 Try/Catch no service para capturar:
-- FeignException.NotFound → CountryNotFoundException
-- Outras FeignException → RuntimeException
+- `FeignException.NotFound` → `CountryNotFoundException`
+- Outras `FeignException` → `RuntimeException`
 
 #### 🧪 Testes automatizados:
-- CountryControllerTest
-- RestExceptionHandlerTest
-- CountryServiceImplTest
+- `CountryControllerTest`
+- `RestExceptionHandlerTest`
+- `CountryServiceImplTest`
 - Cobertura de cenários de sucesso, erro genérico, validação e país não encontrado
 
 #### 🧱 Outros aprimoramentos:
-- Classe ValidationMessages com mensagens e expressões regulares centralizadas
-- Uso de Instancio para facilitar a criação de mocks em testes unitários
-- Inclusão de campo rejectedValue em violações de validação
-- Isolamento de exceção customizada CountryNotFoundException
+- Classe `ValidationMessages` com mensagens e expressões regulares centralizadas
+- Uso de `Instancio` para facilitar a criação de mocks em testes unitários
+- Inclusão de campo `rejectedValue` em violações de validação
+- Isolamento de exceção customizada `CountryNotFoundException`
 
 ### 🧠 Aprendizados
 - ✅ Prática de validação avançada com Bean Validation (Jakarta)
-- ✅ Implementação do padrão Problem Details (RFC 7807) para respostas de erro
-- ✅ Boas práticas em @ControllerAdvice e modelagem de erros
-- ✅ Geração de cenários robustos de teste com Mockito, JUnit 5, MockMvc e Instancio
+- ✅ Implementação do padrão **Problem Details (RFC 7807)** para respostas de erro
+- ✅ Boas práticas em `@ControllerAdvice` e modelagem de erros
+- ✅ Geração de cenários robustos de teste com **Mockito**, **JUnit 5**, **MockMvc** e **Instancio**
 
 ### Tecnologias utilizadas
 - Jakarta Bean Validation
