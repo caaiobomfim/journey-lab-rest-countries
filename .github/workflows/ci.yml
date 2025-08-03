@@ -50,12 +50,19 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
-      - name: Create Pull Request to develop
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: develop
-          head: ${{ steps.extract_branch.outputs.branch_name }}
-          title: 'Auto PR from ${{ steps.extract_branch.outputs.branch_name }} to develop'
-          body: 'Este PR foi aberto automaticamente pelo GitHub Actions após o push na branch ${{ steps.extract_branch.outputs.branch_name }}.'
-          update-existing: true
+
+      - name: Install GitHub CLI
+        run: sudo apt-get install gh -y
+
+      - name: Authenticate CLI
+        run: gh auth login --with-token <<< "${{ secrets.GH_TOKEN }}"
+
+      - name: Create Pull Request
+        run: |
+          gh pr create \
+            --base develop \
+            --head ${{ github.ref_name }} \
+            --title "Auto PR from ${{ github.ref_name }}" \
+            --body "Este PR foi aberto automaticamente após o push da branch ${{ github.ref_name }}."
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
