@@ -12,34 +12,34 @@ Essa entrega foi focada em garantir **qualidade**, **segurança** e **previsibil
 ### ✅ Funcionalidades implementadas
 
 #### 🔒 Validações com Jakarta Bean Validation no parâmetro name:
-- Não nulo ou vazio
-- Tamanho entre 2 e 56 caracteres
-- Somente letras (regex)
+- Não nulo ou vazio.
+- Tamanho entre 2 e 56 caracteres.
+- Somente letras (regex).
 
 #### 🛑 Tratamento global de exceções com @RestControllerAdvice, retornando erros formatados com:
-- `type`, `title`, `status`, `detail`, `instance`, `timestamp`, `violations`
+- `type`, `title`, `status`, `detail`, `instance`, `timestamp`, `violations`.
 
 #### 💥 Try/Catch no service para capturar:
-- `FeignException.NotFound` → `CountryNotFoundException`
-- Outras `FeignException` → `RuntimeException`
+- `FeignException.NotFound` → `CountryNotFoundException`.
+- Outras `FeignException` → `RuntimeException`.
 
 #### 🧪 Testes automatizados:
-- `CountryControllerTest`
-- `RestExceptionHandlerTest`
-- `CountryServiceImplTest`
-- Cobertura de cenários de sucesso, erro genérico, validação e país não encontrado
+- `CountryControllerTest`.
+- `RestExceptionHandlerTest`.
+- `CountryServiceImplTest`.
+- Cobertura de cenários de sucesso, erro genérico, validação e país não encontrado.
 
 #### 🧱 Outros aprimoramentos:
-- Classe `ValidationMessages` com mensagens e expressões regulares centralizadas
-- Uso de `Instancio` para facilitar a criação de mocks em testes unitários
-- Inclusão de campo `rejectedValue` em violações de validação
-- Isolamento de exceção customizada `CountryNotFoundException`
+- Classe `ValidationMessages` com mensagens e expressões regulares centralizadas.
+- Uso de `Instancio` para facilitar a criação de mocks em testes unitários.
+- Inclusão de campo `rejectedValue` em violações de validação.
+- Isolamento de exceção customizada `CountryNotFoundException`.
 
 ### 🧠 Aprendizados
-- ✅ Prática de validação avançada com Bean Validation (Jakarta)
-- ✅ Implementação do padrão **Problem Details (RFC 7807)** para respostas de erro
-- ✅ Boas práticas em `@ControllerAdvice` e modelagem de erros
-- ✅ Geração de cenários robustos de teste com **Mockito**, **JUnit 5**, **MockMvc** e **Instancio**
+- ✅ Prática de validação avançada com Bean Validation (Jakarta).
+- ✅ Implementação do padrão **Problem Details (RFC 7807)** para respostas de erro.
+- ✅ Boas práticas em `@ControllerAdvice` e modelagem de erros.
+- ✅ Geração de cenários robustos de teste com **Mockito**, **JUnit 5**, **MockMvc** e **Instancio**.
 
 ### Tecnologias utilizadas
 - Jakarta Bean Validation
