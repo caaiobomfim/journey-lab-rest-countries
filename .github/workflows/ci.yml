@@ -45,6 +45,7 @@ jobs:
         run: mvn test
 
   open-pull-request:
+    name: Open PR to Develop
     needs: [build, test]
     runs-on: ubuntu-latest
     steps:
