@@ -9,3 +9,10 @@ spring:
         config:
           countryClient:
             url: ${COUNTRY_API_URL}
+          default:
+            connectTimeout: 3000
+            readTimeout: 5000
+logging:
+  level:
+    feign: DEBUG
+    dev.journey.restcountries.client: DEBUG
