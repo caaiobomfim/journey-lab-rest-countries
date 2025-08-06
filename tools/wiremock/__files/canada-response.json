@@ -1,0 +1,9 @@
+[
+  {
+    "name": { "common": "Canada" },
+    "capital": ["Ottawa"],
+    "region": "Americas",
+    "population": 38005238,
+    "flags": { "png": "https://flagcdn.com/w320/ca.png" }
+  }
+]

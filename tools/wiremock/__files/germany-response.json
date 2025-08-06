@@ -1,0 +1,9 @@
+[
+  {
+    "name": { "common": "Germany" },
+    "capital": ["Berlin"],
+    "region": "Europe",
+    "population": 83240525,
+    "flags": { "png": "https://flagcdn.com/w320/de.png" }
+  }
+]

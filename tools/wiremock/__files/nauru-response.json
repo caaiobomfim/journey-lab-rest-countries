@@ -1,0 +1,9 @@
+[
+  {
+    "name": { "common": "Nauru" },
+    "capital": ["Yaren"],
+    "region": "Oceania",
+    "population": 10834,
+    "flags": { "png": "https://flagcdn.com/w320/nr.png" }
+  }
+]
