@@ -1,7 +1,10 @@
-package dev.journey.restcountries.exception;
+package dev.journey.restcountries.unit.exception;
 
 import dev.journey.restcountries.controller.CountryController;
+import dev.journey.restcountries.exception.CountryNotFoundException;
+import dev.journey.restcountries.exception.RestExceptionHandler;
 import dev.journey.restcountries.service.CountryServiceImpl;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -16,6 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @WebMvcTest(controllers = CountryController.class)
 @Import({RestExceptionHandler.class})
+@Tag("unit")
 class RestExceptionHandlerTest {
 
     @Autowired

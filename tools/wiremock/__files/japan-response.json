@@ -1,0 +1,9 @@
+[
+  {
+    "name": { "common": "Japan" },
+    "capital": ["Tokyo"],
+    "region": "Asia",
+    "population": 125836021,
+    "flags": { "png": "https://flagcdn.com/w320/jp.png" }
+  }
+]

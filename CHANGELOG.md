@@ -4,6 +4,43 @@ Todas as mudanças importantes do projeto estão documentadas aqui, seguindo o p
 
 ---
 
+### [0.4.0] - 2025-08-05
+## 🚀 Testes de Integração com WireMock + Testcontainers
+### 📌 Visão Geral
+Esta versão marca um avanço significativo nos testes de integração do projeto, com foco em **resiliência de chamadas externas**, **mapeamento dinâmico via WireMock** e **validação de comportamento real da aplicação usando Testcontainers**. Também foi iniciado o tratamento mais robusto de cenários de erro e configurações de headers e logging para clientes Feign.
+
+### ✅ Funcionalidades Implementadas
+#### ✅ Implementação de testes de integração com Testcontainers + WireMock
+- Criação da classe `CountryServiceIT`.
+- Simulação de 5 países com mapeamentos estáticos (`brazil`, `canada`, `germany`, `japan`, `nauru`).
+- Validação completa dos dados retornados (nome, capital, região, população, flag).
+#### ⚠️ Cenário de exceção implementado
+- Simulação de país inexistente via WireMock para retorno `404`.
+- Validação do lançamento de `CountryNotFoundException`.
+#### 🎯 Inclusão de headers obrigatórios nas chamadas externas
+- Adição do header `Accept: application/json` via `RequestInterceptor`.
+- Criação da classe `CountryFeignConfig` com beans de interceptação e logging (`Logger.Level.FULL`).
+#### 🔗 Configurações específicas de logging para Feign
+- Adição de nível de log `DEBUG` para Feign e o client específico no `application.yml`.
+#### 🏷️ Organização e anotação dos testes
+- Marcação de testes com `@Tag("unit")` e `@Tag("integration")` para facilitar a execução segmentada.
+
+### 🧠 Aprendizados
+- Domínio do uso de **WireMock com mappings e delays customizados**.
+- Configuração de **Testcontainers** para subir o WireMock isoladamente nos testes.
+- Estratégias para **definir e sobrescrever URLs dinâmicas com** `@DynamicPropertySource`.
+- Uso de `RequestInterceptor` para **padronizar headers em todas as chamadas Feign**.
+- Estruturação de testes mais resilientes com `assertThrows`, `WireMock.verify` e uso de **cenários negativos controlados**.
+
+### 🧰 Tecnologias Utilizadas
+- **Spring Boot 3**
+- **Feign Client** com configuração customizada
+- **WireMock** via container Docker com mappings e arquivos JSON
+- **Testcontainers** para testes de integração reprodutíveis
+- **JUnit 5** com `@SpringBootTest`, `@Tag`, `assertThrows`, entre outros
+- **SLF4J / Feign Logging** para inspeção detalhada das chamadas
+- **Docker** e estrutura local de `tools/wiremock`
+
 ### [0.3.0] - 2025-08-03
 ## 🚀 GitHub Actions, SonarCloud, Proteções de Branch e Automação de PRs
 ### 📌 Visão Geral
