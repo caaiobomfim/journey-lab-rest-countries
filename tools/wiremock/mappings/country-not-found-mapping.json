@@ -1,7 +1,7 @@
 {
   "request": {
     "method": "GET",
-    "url": "/v3.1/name/brazil",
+    "url": "/v3.1/name/unknown-country",
     "headers": {
       "Accept": {
         "contains": "application/json"
@@ -9,8 +9,8 @@
     }
   },
   "response": {
-    "status": 200,
-    "bodyFileName": "brazil-response.json",
+    "status": 404,
+    "bodyFileName": "country-not-found-response.json",
     "headers": {
       "Content-Type": "application/json"
     }

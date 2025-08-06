@@ -6,18 +6,18 @@ Projeto experimental focado em práticas de DevOps e SRE, utilizando a [REST Cou
 
 ## 📅 Planejamento de Releases
 
-| Release                       | Objetivo                                                              | Status         |
-|-------------------------------|-----------------------------------------------------------------------|----------------|
-| [**0.1.0**](CHANGELOG.md#010) | API funcional com consumo da REST Countries                           | ✅ Concluída    |
-| [**0.2.0**](CHANGELOG.md#020) | Robustez e confiança: testes unitários e tratamento de exceções       | ✅ Concluída    |
-| [**0.3.0**](CHANGELOG.md#030) | Automação de CI/CD, controle de qualidade e integração com SonarCloud | ✅ Concluída    |
-| **0.4.0**                     | Testes + mock da API externa                                          | ⏳ Planejada    |
-| **0.5.0**                     | Dockerização                                                          | ⏳ Planejada    |
-| **0.6.0**                     | Deploy com Terraform em AWS ECS                                       | ⏳ Planejada    |
-| **0.7.0**                     | API Gateway + autenticação básica                                     | ⏳ Planejada    |
-| **0.8.0**                     | Alertas e dashboards com Grafana/Datadog                              | ⏳ Planejada    |
-| **0.9.0**                     | Resiliência: Retry, Timeout, Circuit Breaker                          | ⏳ Planejada    |
-| **1.0.0**                     | Publicação no GitHub + LinkedIn                                       | ⏳ Planejada    |
+| Release                       | Objetivo                                                                                                                                                                      | Status         |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
+| [**0.1.0**](CHANGELOG.md#010) | API funcional com consumo da REST Countries                                                                                                                                   | ✅ Concluída    |
+| [**0.2.0**](CHANGELOG.md#020) | Robustez e confiança: testes unitários e tratamento de exceções                                                                                                               | ✅ Concluída    |
+| [**0.3.0**](CHANGELOG.md#030) | Automação de CI/CD, controle de qualidade e integração com SonarCloud                                                                                                         | ✅ Concluída    |
+| [**0.4.0**](CHANGELOG.md#040) | Testes de Integração com WireMock + Testcontainers                                                                                                                            | ✅ Concluída    |
+| **0.5.0**                     | Deploy na AWS com Terraform e ECS Fargate: Provisionamento da infraestrutura com Terraform e pipeline de deploy automático para ECS (sem expor segredos)                      | ⏳ Planejada    |
+| **0.6.0**                     | Autenticação com OAuth2 e Spring Security: Substituir autenticação básica por OAuth2, protegendo endpoints com roles e tokens JWT                                             | ⏳ Planejada    |
+| **0.7.0**                     | Observabilidade com Prometheus + Grafana + Logs estruturados: Expor métricas com Micrometer/Prometheus, configurar dashboards no Grafana e padronizar logs com MDC/JSON       | ⏳ Planejada    |
+| **0.8.0**                     | Resiliência e tolerância a falhas: Implementar Retry, Timeout, Circuit Breaker (com Resilience4j), com fallback nos adapters e integração com observabilidade                 | ⏳ Planejada    |
+| **0.9.0**                     | Criação do Front-End com Vue.js                                                                                                                                               | ⏳ Planejada    |
+| **1.0.0**                     | Publicação oficial com documentação + post LinkedIn: Gerar README final, documentação OpenAPI e realizar publicação no GitHub e LinkedIn apresentando aprendizados da jornada | ⏳ Planejada    |
 
 ---
 

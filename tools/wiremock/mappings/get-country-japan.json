@@ -1,7 +1,7 @@
 {
   "request": {
     "method": "GET",
-    "url": "/v3.1/name/brazil",
+    "url": "/v3.1/name/japan",
     "headers": {
       "Accept": {
         "contains": "application/json"
@@ -10,7 +10,7 @@
   },
   "response": {
     "status": 200,
-    "bodyFileName": "brazil-response.json",
+    "bodyFileName": "japan-response.json",
     "headers": {
       "Content-Type": "application/json"
     }

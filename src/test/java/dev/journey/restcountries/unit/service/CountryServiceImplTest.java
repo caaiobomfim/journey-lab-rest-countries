@@ -1,14 +1,16 @@
-package dev.journey.restcountries.service;
+package dev.journey.restcountries.unit.service;
 
 import dev.journey.restcountries.client.CountryClient;
 import dev.journey.restcountries.dto.CountryApiResponse;
 import dev.journey.restcountries.dto.CountryResponse;
 import dev.journey.restcountries.exception.CountryNotFoundException;
-import dev.journey.restcountries.factory.CountryInstancioFactory;
+import dev.journey.restcountries.service.CountryServiceImpl;
+import dev.journey.restcountries.unit.factory.CountryInstancioFactory;
 import feign.FeignException;
 import feign.Request;
 import feign.Response;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.nio.charset.StandardCharsets;
@@ -18,6 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+@Tag("unit")
 class CountryServiceImplTest {
 
     private CountryClient countryClient;

@@ -1,4 +1,4 @@
-package dev.journey.restcountries.factory;
+package dev.journey.restcountries.unit.factory;
 
 import dev.journey.restcountries.dto.CountryApiResponse;
 import dev.journey.restcountries.dto.CountryResponse;
